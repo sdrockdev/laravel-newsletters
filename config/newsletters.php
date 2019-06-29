@@ -14,11 +14,6 @@ return [
     'driver' => env('MAILCHIMP_DRIVER', 'api'),
 
     /*
-     * The accountName to use when no accountName has been specified in a method.
-     */
-    'defaultAccountName' => 'default',
-
-    /*
      * The list of Mailchimp accounts
      */
     'accounts' => [
