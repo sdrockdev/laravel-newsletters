@@ -33,15 +33,14 @@ class NewsletterFactoryTest extends TestCase
                     'defaultListName' => 'list3',
                 ],
             ],
-            'defaultAccountName' => 'rockchurch',
             'ssl' => true,
         ]);
     }
 
     /** @test */
-    public function it_can_make_an_account()
+    public function it_can_be_intiated_with_an_account()
     {
-        $newsletter = $this->factory->create('sdrock');
+        $newsletter = $this->factory->account('sdrock');
         $this->assertInstanceOf(Newsletter::class, $newsletter);
     }
 
@@ -49,7 +48,7 @@ class NewsletterFactoryTest extends TestCase
     public function it_fails_on_nonexistent_account_key()
     {
         $this->expectException(\Exception::class);
-        $newsletter = $this->factory->create('jfajkjadsfsafsdfsa');
+        $newsletter = $this->factory->account('jfajkjadsfsafsdfsa');
     }
 
     public function tearDown() : void

@@ -17,7 +17,7 @@ class NewsletterFactory
         $this->config = $config;
     }
 
-    function create(string $accountName) : Newsletter
+    function account(string $accountName) : Newsletter
     {
         // Return the newsletter if it has already been created
         if ( isset($this->newsletters[$accountName]) ) {
